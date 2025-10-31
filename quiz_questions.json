@@ -1,0 +1,499 @@
+{
+  "questions": [
+    {
+      "question": "The Chandrasekhar limit, which determines the maximum mass of a stable white dwarf star, is approximately how many solar masses?",
+      "options": ["1.44", "2.17", "0.88", "3.01"],
+      "correct": 0
+    },
+    {
+      "question": "The War of the Triple Alliance was a devastating South American conflict fought between Paraguay and which three allied countries?",
+      "options": ["Chile, Peru, and Bolivia", "Argentina, Brazil, and Uruguay", "Colombia, Venezuela, and Ecuador", "Mexico, the USA, and Cuba"],
+      "correct": 1
+    },
+    {
+      "question": "In Dante's 'Inferno,' who guides the protagonist through the nine circles of Hell?",
+      "options": ["Beatrice", "Charon", "Saint Peter", "Virgil"],
+      "correct": 3
+    },
+    {
+      "question": "The 'School of Athens,' a fresco depicting numerous philosophers, was painted by which High Renaissance artist?",
+      "options": ["Leonardo da Vinci", "Michelangelo", "Raphael", "Titian"],
+      "correct": 2
+    },
+    {
+      "question": "What is the name of the enzyme that unwinds the DNA double helix during replication?",
+      "options": ["Polymerase", "Ligase", "Helicase", "Primase"],
+      "correct": 2
+    },
+    {
+      "question": "Who was the last emperor of the Byzantine Empire, dying during the Fall of Constantinople in 1453?",
+      "options": ["Justinian I", "Alexios I Komnenos", "Constantine XI Palaiologos", "Basil II"],
+      "correct": 2
+    },
+    {
+      "question": "The philosophical principle 'Cogito, ergo sum' ('I think, therefore I am') is attributed to whom?",
+      "options": ["John Locke", "Plato", "René Descartes", "Aristotle"],
+      "correct": 2
+    },
+    {
+      "question": "In computer networking, what does the acronym 'DNS' stand for?",
+      "options": ["Digital Network Service", "Domain Name System", "Dynamic Naming Service", "Data Naming Standard"],
+      "correct": 1
+    },
+    {
+      "question": "The economic theory that advocates for minimal government intervention in the economy is known as what?",
+      "options": ["Keynesianism", "Mercantilism", "Laissez-faire", "Socialism"],
+      "correct": 2
+    },
+    {
+      "question": "In the film '2001: A Space Odyssey,' what is the name of the malevolent artificial intelligence?",
+      "options": ["GLaDOS", "Skynet", "HAL 9000", "V.I.K.I."],
+      "correct": 2
+    },
+    {
+      "question": "What is the SI unit of magnetic flux density?",
+      "options": ["Weber", "Henry", "Tesla", "Lumen"],
+      "correct": 2
+    },
+    {
+      "question": "The Islets of Langerhans, which contain the body's insulin-producing cells, are found in which organ?",
+      "options": ["Liver", "Spleen", "Pancreas", "Kidney"],
+      "correct": 2
+    },
+    {
+      "question": "The Meiji Restoration in 1868 led to the downfall of what ruling military government in Japan?",
+      "options": ["The Heian court", "The Kamakura shogunate", "The Ashikaga shogunate", "The Tokugawa shogunate"],
+      "correct": 3
+    },
+    {
+      "question": "Which novel by Gabriel García Márquez tells the multi-generational story of the Buendía family in the fictional town of Macondo?",
+      "options": ["Love in the Time of Cholera", "One Hundred Years of Solitude", "Chronicle of a Death Foretold", "The Autumn of the Patriarch"],
+      "correct": 1
+    },
+    {
+      "question": "'The Persistence of Memory,' famous for its melting clocks, is a masterpiece by which Surrealist artist?",
+      "options": ["René Magritte", "Salvador Dalí", "Max Ernst", "Joan Miró"],
+      "correct": 1
+    },
+    {
+      "question": "The Great Rift Valley is a major geological feature that runs primarily through which continent?",
+      "options": ["South America", "Asia", "Africa", "Australia"],
+      "correct": 2
+    },
+    {
+      "question": "In programming, what is the time complexity of a binary search algorithm on a sorted array?",
+      "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
+      "correct": 1
+    },
+    {
+      "question": "In Norse mythology, what is the name of the world tree that connects the nine worlds?",
+      "options": ["Asgard", "Midgard", "Bifröst", "Yggdrasil"],
+      "correct": 3
+    },
+    {
+      "question": "Who is the author of 'The Wealth of Nations,' a foundational text in classical economics?",
+      "options": ["Karl Marx", "Adam Smith", "John Maynard Keynes", "David Ricardo"],
+      "correct": 1
+    },
+    {
+      "question": "The first successful expedition to the summit of Mount Everest in 1953 was led by whom?",
+      "options": ["Sir Edmund Hillary", "Tenzing Norgay", "John Hunt", "George Mallory"],
+      "correct": 2
+    },
+    {
+      "question": "In chemistry, what is the name of the rule stating that for a given multi-electron atom, the term with maximum multiplicity has the lowest energy?",
+      "options": ["Hund's Rule", "Pauli Exclusion Principle", "Aufbau Principle", "Heisenberg's Uncertainty Principle"],
+      "correct": 0
+    },
+    {
+      "question": "What is the medical term for programmed cell death, a crucial process in multicellular organisms?",
+      "options": ["Necrosis", "Apoptosis", "Mitosis", "Phagocytosis"],
+      "correct": 1
+    },
+    {
+      "question": "The 'Great Game' was a 19th-century political and diplomatic rivalry between which two empires over influence in Central Asia?",
+      "options": ["Ottoman and Persian", "British and Russian", "French and German", "Austro-Hungarian and Ottoman"],
+      "correct": 1
+    },
+    {
+      "question": "The Epic of Gilgamesh, one of the earliest surviving works of literature, originates from which ancient civilization?",
+      "options": ["Egyptian", "Greek", "Mesopotamian", "Roman"],
+      "correct": 2
+    },
+    {
+      "question": "Who composed the famous ballets 'The Nutcracker,' 'Swan Lake,' and 'Sleeping Beauty'?",
+      "options": ["Igor Stravinsky", "Sergei Prokofiev", "Pyotr Ilyich Tchaikovsky", "Dmitri Shostakovich"],
+      "correct": 2
+    },
+    {
+      "question": "Which of the Great Lakes is the only one that lies entirely within the United States?",
+      "options": ["Lake Superior", "Lake Huron", "Lake Erie", "Lake Michigan"],
+      "correct": 3
+    },
+    {
+      "question": "Which protocol is used for sending email from a client to a server?",
+      "options": ["POP3", "IMAP", "SMTP", "HTTP"],
+      "correct": 2
+    },
+    {
+      "question": "The 'Allegory of the Cave' is a famous concept from which philosopher's work 'The Republic'?",
+      "options": ["Socrates", "Plato", "Aristotle", "Zeno"],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is NOT a permanent member of the UN Security Council?",
+      "options": ["United Kingdom", "France", "Germany", "China"],
+      "correct": 2
+    },
+    {
+      "question": "Who directed the classic 1954 Japanese film 'Seven Samurai'?",
+      "options": ["Yasujirō Ozu", "Akira Kurosawa", "Kenji Mizoguchi", "Hayao Miyazaki"],
+      "correct": 1
+    },
+    {
+      "question": "The Haber-Bosch process, critical for industrial agriculture, synthesizes what chemical from nitrogen and hydrogen gas?",
+      "options": ["Nitric Acid", "Ammonia", "Hydrazine", "Urea"],
+      "correct": 1
+    },
+    {
+      "question": "Prions, the infectious agents responsible for diseases like Mad Cow Disease, are composed primarily of what?",
+      "options": ["DNA", "RNA", "Lipids", "Misfolded Protein"],
+      "correct": 3
+    },
+    {
+      "question": "The Treaty of Tordesillas (1494) divided the newly discovered lands outside Europe between which two colonial powers?",
+      "options": ["England and France", "Spain and Portugal", "The Netherlands and England", "France and Spain"],
+      "correct": 1
+    },
+    {
+      "question": "Who wrote the existentialist novel 'The Stranger' ('L'Étranger'), which begins with the line 'Mother died today.'?",
+      "options": ["Jean-Paul Sartre", "Simone de Beauvoir", "Albert Camus", "Franz Kafka"],
+      "correct": 2
+    },
+    {
+      "question": "The architectural style characterized by pointed arches, ribbed vaults, and flying buttresses is known as what?",
+      "options": ["Romanesque", "Baroque", "Neoclassical", "Gothic"],
+      "correct": 3
+    },
+    {
+      "question": "What is the name of the supercontinent that existed during the late Paleozoic and early Mesozoic eras?",
+      "options": ["Gondwana", "Laurasia", "Pangaea", "Rodinia"],
+      "correct": 2
+    },
+    {
+      "question": "What was the name of the first programmable, electronic, general-purpose digital computer, completed in 1945?",
+      "options": ["Colossus", "Atanasoff-Berry Computer", "Z3", "ENIAC"],
+      "correct": 3
+    },
+    {
+      "question": "In Hindu mythology, who is the preserver god and one of the principal deities of the Trimurti?",
+      "options": ["Brahma", "Shiva", "Vishnu", "Ganesha"],
+      "correct": 2
+    },
+    {
+      "question": "The Bretton Woods Agreement of 1944 established a system of international monetary management that pegged other currencies to what?",
+      "options": ["The British Pound", "The Gold Standard", "The U.S. Dollar", "A basket of currencies"],
+      "correct": 2
+    },
+    {
+      "question": "The term 'meme' was coined in 1976 by which evolutionary biologist in his book 'The Selfish Gene'?",
+      "options": ["Stephen Jay Gould", "Carl Sagan", "Richard Dawkins", "E. O. Wilson"],
+      "correct": 2
+    },
+    {
+      "question": "In quantum mechanics, what is the term for a system where particles are linked in such a way that their fates are inseparable, regardless of distance?",
+      "options": ["Superposition", "Quantum tunneling", "Entanglement", "Decoherence"],
+      "correct": 2
+    },
+    {
+      "question": "What is the primary function of the sinoatrial (SA) node in the human heart?",
+      "options": ["Pumping blood to the lungs", "Filtering toxins from blood", "Acting as the natural pacemaker", "Producing red blood cells"],
+      "correct": 2
+    },
+    {
+      "question": "The Taiping Rebellion, one of the deadliest conflicts in human history, occurred in which country during the mid-19th century?",
+      "options": ["India", "Japan", "Russia", "China"],
+      "correct": 3
+    },
+    {
+      "question": "What is the name of the protagonist in Fyodor Dostoevsky's 'Crime and Punishment'?",
+      "options": ["Alyosha Karamazov", "Prince Myshkin", "Rodion Raskolnikov", "Dmitri Karamazov"],
+      "correct": 2
+    },
+    {
+      "question": "The painting 'Guernica,' a powerful anti-war statement, was created by which artist in response to a bombing during the Spanish Civil War?",
+      "options": ["Francisco Goya", "Pablo Picasso", "Joan Miró", "Salvador Dalí"],
+      "correct": 1
+    },
+    {
+      "question": "The Strait of Hormuz, a critical chokepoint for global oil transport, connects the Persian Gulf with which body of water?",
+      "options": ["The Red Sea", "The Mediterranean Sea", "The Arabian Sea", "The Bay of Bengal"],
+      "correct": 2
+    },
+    {
+      "question": "In cryptography, which of the following is an example of an asymmetric encryption algorithm?",
+      "options": ["AES", "DES", "RSA", "Blowfish"],
+      "correct": 2
+    },
+    {
+      "question": "Utilitarianism, the ethical theory that promotes actions maximizing happiness, was primarily developed by which two philosophers?",
+      "options": ["Kant and Hegel", "Locke and Hobbes", "Bentham and Mill", "Plato and Aristotle"],
+      "correct": 2
+    },
+    {
+      "question": "What is the term for a market situation where there is only one buyer for a good or service?",
+      "options": ["Monopoly", "Monopsony", "Oligopoly", "Duopoly"],
+      "correct": 1
+    },
+    {
+      "question": "The Manhattan Project was a research and development undertaking during World War II that produced the first what?",
+      "options": ["Jet engine", "Radar system", "Digital computer", "Nuclear weapons"],
+      "correct": 3
+    },
+    {
+      "question": "Which allotrope of carbon consists of a single layer of atoms arranged in a two-dimensional honeycomb lattice?",
+      "options": ["Diamond", "Graphite", "Graphene", "Fullerene"],
+      "correct": 2
+    },
+    {
+      "question": "Carl Linnaeus is famous for his work in taxonomy. What was the highest taxonomic rank in his original system?",
+      "options": ["Kingdom", "Phylum", "Class", "Domain"],
+      "correct": 0
+    },
+    {
+      "question": "Which battle in 1066, besides Hastings, saw an English victory over a Norwegian invasion force led by King Harald Hardrada?",
+      "options": ["Battle of Stamford Bridge", "Battle of Fulford", "Battle of Agincourt", "Battle of Towton"],
+      "correct": 0
+    },
+    {
+      "question": "The literary concept of an 'unreliable narrator' is famously exemplified by the governess in which Henry James novella?",
+      "options": ["The Portrait of a Lady", "The Turn of the Screw", "Daisy Miller", "The Wings of the Dove"],
+      "correct": 1
+    },
+    {
+      "question": "Who composed the famous set of four violin concertos known as 'The Four Seasons'?",
+      "options": ["George Frideric Handel", "Johann Sebastian Bach", "Antonio Vivaldi", "Arcangelo Corelli"],
+      "correct": 2
+    },
+    {
+      "question": "What is the highest mountain in North America?",
+      "options": ["Mount Logan", "Denali", "Pico de Orizaba", "Mount Whitney"],
+      "correct": 1
+    },
+    {
+      "question": "The concept of 'Turing completeness' means a system of computation can theoretically solve what?",
+      "options": ["Any mathematical problem", "Any problem a Turing machine can", "Only logical operations", "Problems in linear time"],
+      "correct": 1
+    },
+    {
+      "question": "In Roman mythology, who is the goddess of wisdom and strategic warfare, equivalent to the Greek Athena?",
+      "options": ["Juno", "Venus", "Diana", "Minerva"],
+      "correct": 3
+    },
+    {
+      "question": "The 'separation of powers' into legislative, executive, and judicial branches was most famously articulated by which Enlightenment philosopher?",
+      "options": ["John Locke", "Thomas Hobbes", "Jean-Jacques Rousseau", "Montesquieu"],
+      "correct": 3
+    },
+    {
+      "question": "Which architect designed the famous 'Fallingwater' house in Pennsylvania?",
+      "options": ["Le Corbusier", "Frank Gehry", "I. M. Pei", "Frank Lloyd Wright"],
+      "correct": 3
+    },
+    {
+      "question": "What is the phenomenon where a spinning object moving through a fluid experiences a sideways force?",
+      "options": ["Coriolis effect", "Magnus effect", "Doppler effect", "Venturi effect"],
+      "correct": 1
+    },
+    {
+      "question": "In genetics, what is the term for a specific variation of a gene?",
+      "options": ["Chromosome", "Genotype", "Allele", "Locus"],
+      "correct": 2
+    },
+    {
+      "question": "Who was the female pharaoh of the 18th Dynasty of Egypt who reigned longer than any other woman of an indigenous Egyptian dynasty?",
+      "options": ["Nefertiti", "Cleopatra VII", "Hatshepsut", "Sobekneferu"],
+      "correct": 2
+    },
+    {
+      "question": "Which Japanese author wrote 'The Tale of Genji,' often considered the world's first novel?",
+      "options": ["Murasaki Shikibu", "Sei Shōnagon", "Yasunari Kawabata", "Yukio Mishima"],
+      "correct": 0
+    },
+    {
+      "question": "The art movement characterized by a subjective perspective, distorting reality for emotional effect, is known as what?",
+      "options": ["Impressionism", "Cubism", "Surrealism", "Expressionism"],
+      "correct": 3
+    },
+    {
+      "question": "What type of rock is formed from the cooling and solidification of magma or lava?",
+      "options": ["Sedimentary", "Metamorphic", "Igneous", "Fossiliferous"],
+      "correct": 2
+    },
+    {
+      "question": "Who is often called the 'father of the modern computer' for his 19th-century design of the Analytical Engine?",
+      "options": ["Alan Turing", "John von Neumann", "Charles Babbage", "Blaise Pascal"],
+      "correct": 2
+    },
+    {
+      "question": "In Greek mythology, who was the ferryman of the dead across the river Styx?",
+      "options": ["Hades", "Charon", "Cerberus", "Thanatos"],
+      "correct": 1
+    },
+    {
+      "question": "The 'invisible hand' is a metaphor used by Adam Smith to describe what?",
+      "options": ["Government regulation", "Unintended social benefits of individual self-interested actions", "The power of a central bank", "Corporate monopoly power"],
+      "correct": 1
+    },
+    {
+      "question": "What was the name of the first artificial satellite launched into Earth's orbit, by the Soviet Union in 1957?",
+      "options": ["Explorer 1", "Sputnik 1", "Vostok 1", "Luna 1"],
+      "correct": 1
+    },
+    {
+      "question": "Which of the noble gases is the most reactive and able to form stable chemical compounds?",
+      "options": ["Helium", "Neon", "Argon", "Xenon"],
+      "correct": 3
+    },
+    {
+      "question": "The Krebs cycle (or Citric Acid Cycle) primarily occurs in which part of the eukaryotic cell?",
+      "options": ["Cytoplasm", "Mitochondrial matrix", "Ribosome", "Cell nucleus"],
+      "correct": 1
+    },
+    {
+      "question": "The 'Scramble for Africa' was largely initiated by which 1884-1885 international meeting in Europe?",
+      "options": ["The Congress of Vienna", "The Berlin Conference", "The Treaty of Versailles", "The London Convention"],
+      "correct": 1
+    },
+    {
+      "question": "What is the opening line of Leo Tolstoy's 'Anna Karenina'?",
+      "options": ["'It is a truth universally acknowledged...'", "'Call me Ishmael.'", "'Happy families are all alike; every unhappy family is unhappy in its own way.'", "'It was the best of times, it was the worst of times...'"],
+      "correct": 2
+    },
+    {
+      "question": "In music, what does the term 'crescendo' instruct a musician to do?",
+      "options": ["Play slower", "Play softly", "Gradually increase volume", "Hold the note"],
+      "correct": 2
+    },
+    {
+      "question": "The Atacama Desert, one of the driest places on Earth, is located primarily in which South American country?",
+      "options": ["Peru", "Chile", "Argentina", "Bolivia"],
+      "correct": 1
+    },
+    {
+      "question": "What does 'SQL' stand for in the context of databases?",
+      "options": ["Simple Query Language", "Structured Query Language", "Standard Question Language", "System Query Logic"],
+      "correct": 1
+    },
+    {
+      "question": "Which philosopher wrote 'Thus Spoke Zarathustra' and is known for the concept of the 'Übermensch' (Overman)?",
+      "options": ["Immanuel Kant", "Søren Kierkegaard", "Friedrich Nietzsche", "Arthur Schopenhauer"],
+      "correct": 2
+    },
+    {
+      "question": "What is the name of the international organization that works to secure global financial stability and promote international trade, created at Bretton Woods?",
+      "options": ["World Bank", "World Trade Organization", "International Monetary Fund (IMF)", "United Nations"],
+      "correct": 2
+    },
+    {
+      "question": "The discovery of the double helix structure of DNA, published in 1953, is primarily credited to which two scientists?",
+      "options": ["Linus Pauling and Robert Corey", "Maurice Wilkins and Rosalind Franklin", "James Watson and Francis Crick", "Erwin Chargaff and Oswald Avery"],
+      "correct": 2
+    },
+    {
+      "question": "What type of radioactive decay involves the emission of an electron or a positron from an atomic nucleus?",
+      "options": ["Alpha decay", "Beta decay", "Gamma decay", "Neutron emission"],
+      "correct": 1
+    },
+    {
+      "question": "The Cushing's triad, a physiological response to increased intracranial pressure, consists of bradycardia, irregular respiration, and what else?",
+      "options": ["Fever", "Hypotension", "Hypertension", "Tachycardia"],
+      "correct": 2
+    },
+    {
+      "question": "What ancient city, a rival to Rome, was famously destroyed at the end of the Third Punic War with the phrase 'Carthago delenda est'?",
+      "options": ["Athens", "Syracuse", "Carthage", "Alexandria"],
+      "correct": 2
+    },
+    {
+      "question": "In Homer's 'Odyssey,' what is the name of Odysseus's son, who searches for his father?",
+      "options": ["Hector", "Telemachus", "Achilles", "Agamemnon"],
+      "correct": 1
+    },
+    {
+      "question": "Which composer's Symphony No. 9, also known as the 'Choral' symphony, includes the famous 'Ode to Joy'?",
+      "options": ["Mozart", "Beethoven", "Bach", "Haydn"],
+      "correct": 1
+    },
+    {
+      "question": "What is the term for a point on the Earth's surface directly above the hypocenter or focus of an earthquake?",
+      "options": ["Epicenter", "Fault line", "Tectonic plate", "Subduction zone"],
+      "correct": 0
+    },
+    {
+      "question": "The term 'API' in software development stands for what?",
+      "options": ["Advanced Programming Interface", "Application Programming Interface", "Automated Protocol Interaction", "Abstract Program Interpreter"],
+      "correct": 1
+    },
+    {
+      "question": "In Egyptian mythology, who is the god of the afterlife, death, and resurrection?",
+      "options": ["Ra", "Anubis", "Horus", "Osiris"],
+      "correct": 3
+    },
+    {
+      "question": "In political science, what form of government is characterized by the rule of a small group of people?",
+      "options": ["Autocracy", "Democracy", "Oligarchy", "Anarchy"],
+      "correct": 2
+    },
+    {
+      "question": "Which band released the influential 1977 punk rock album 'Never Mind the Bollocks, Here's the...'?",
+      "options": ["The Clash", "The Ramones", "The Sex Pistols", "The Damned"],
+      "correct": 2
+    },
+    {
+      "question": "What is the name for a particle that is its own antiparticle?",
+      "options": ["Lepton", "Boson", "Hadron", "Majorana fermion"],
+      "correct": 3
+    },
+    {
+      "question": "Which vitamin is essential for blood coagulation, and its deficiency can lead to bleeding disorders?",
+      "options": ["Vitamin C", "Vitamin D", "Vitamin K", "Vitamin B12"],
+      "correct": 2
+    },
+    {
+      "question": "The character 'Big Brother' and the concept of 'thoughtcrime' are from which dystopian novel?",
+      "options": ["Brave New World", "Fahrenheit 451", "Nineteen Eighty-Four", "A Clockwork Orange"],
+      "correct": 2
+    },
+    {
+      "question": "What is the name of the minimalist sculpture by Auguste Rodin depicting a solitary, pensive figure?",
+      "options": ["The Kiss", "The Burghers of Calais", "The Thinker", "The Age of Bronze"],
+      "correct": 2
+    },
+    {
+      "question": "Which country has the most international land borders?",
+      "options": ["Russia", "Brazil", "Germany", "China"],
+      "correct": 3
+    },
+    {
+      "question": "What does the 'S' in 'HTTPS' stand for?",
+      "options": ["Standard", "System", "Secure", "Service"],
+      "correct": 2
+    },
+    {
+      "question": "Existentialism is a school of philosophy most associated with which 20th-century French thinker?",
+      "options": ["Ludwig Wittgenstein", "Bertrand Russell", "Jean-Paul Sartre", "Karl Popper"],
+      "correct": 2
+    },
+    {
+      "question": "What does 'GDP' stand for in economics?",
+      "options": ["General Domestic Product", "Gross Domestic Product", "Global Development Project", "Government Debt Percentage"],
+      "correct": 1
+    },
+    {
+      "question": "The Turing Test, developed by Alan Turing, is a test of a machine's ability to exhibit what?",
+      "options": ["Superior processing speed", "Creative problem solving", "Intelligent behavior indistinguishable from a human's", "Flawless mathematical calculation"],
+      "correct": 2
+    }
+  ]
+}
