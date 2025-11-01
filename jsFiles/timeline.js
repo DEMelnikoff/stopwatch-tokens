@@ -371,9 +371,9 @@ var enjoyQs = function(shortName, getFullNameFn) {
 
 var scbQs = function(shortName, getFullNameFn) {
     this.type = 'survey-likert';
-    this.preamble = () => `<div class='qInfo' style="text-align: left; max-width: 700px; margin: auto;"><p>Next, we're interested in how <strong>difficult</strong> you found the ${getFullNameFn()}. Please answer the following questions as honestly and accurately as possible.</p></div>`;
+    this.preamble = () => `<div class='qInfo' style="text-align: left; max-width: 700px; margin: auto;"><p>Next, we're interested in how <strong>difficult</strong> you found ${getFullNameFn()}. Please answer the following questions as honestly and accurately as possible.</p></div>`;
     this.questions = () => [
-            { prompt: `How difficult did you find the ${getFullNameFn()}?`, name: 'scb', labels: ['-4<br>Way too easy', '-3', '-2', '-1', '0<br>Neither too eary nor too hard', '1', '2', '3', '4<br>Way too hard'], required: true },
+            { prompt: `How difficult did you find ${getFullNameFn()}?`, name: 'scb', labels: ['-4<br>Way too easy', '-3', '-2', '-1', '0<br>Neither too easy nor too hard', '1', '2', '3', '4<br>Way too hard'], required: true },
         ];
     this.randomize_question_order = false; this.scale_width = 600; this.data = { questionnaire: 'enjoyment', game_short: shortName }; this.on_finish = saveSurveyData;
 };
