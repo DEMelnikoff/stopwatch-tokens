@@ -70,7 +70,7 @@ switch (condition_assignment) {
     case 3:
         condition_specific_paragraph = `<div style="font-size:20px; width:700px"><p>There is a $100 bonus opportunity!</p>
         <p>Throughout the Stopwatch Game, you'll earn tokens for good performance. <strong>Your tokens will be entered into a lottery, and if one of your tokens is drawn, you'll earn $100</strong>. To maximize your chances of winning $100, win as many tokens as possible!</p>
-        <p>You'll earn tokens each time you stop the timer between 4.80s and 5.20s. Specifically, <strong>each time you stop the timer between 4.80s and 5.20s, you'll earn 4 tokens</strong>.</p>
+        <p>You'll earn tokens each time you stop the timer between 4.80s and 5.20s. Specifically, <strong>each time you stop the timer between 4.80s and 5.20s, you'll earn 1.5 tokens</strong>.</p>
         <p>To maximize your chances of winning $100, <strong>you must stop the timer between 4.80s and 5.20s</strong>.</p>`;
         break;
 }
@@ -90,7 +90,7 @@ switch (condition_assignment) {
     case 3:
         final_reminder_text = `<div class="instructions" style="text-align: left; font-size: 20px; max-width: 650px; margin: auto;">
         <p>Next, you will play the Stopwatch Game.</p>
-        <p>As a final reminder, you'll earn tokens each time you stop the timer between 4.80s and 5.20s. Specifically, <strong>each time you stop the timer between 4.80s and 5.20s, you'll earn 4 tokens</strong>.</p></div>`;
+        <p>As a final reminder, you'll earn tokens each time you stop the timer between 4.80s and 5.20s. Specifically, <strong>each time you stop the timer between 4.80s and 5.20s, you'll earn 1.5 tokens</strong>.</p></div>`;
         break;
 }
 
