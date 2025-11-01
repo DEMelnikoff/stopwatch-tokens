@@ -28,7 +28,8 @@ if (rand_num < 0.33333) {
 console.log("Condition:", condition_assignment);
 
 jsPsych.data.addProperties({
-    condition: condition_assignment
+    subject: filename_prefix,
+    condition: condition_assignment,
 });
 
 // --- DYNAMIC TEXT STRINGS ---
