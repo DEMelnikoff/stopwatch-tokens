@@ -40,8 +40,8 @@ let moneyMessage0 = condition_assignment == 1 ? '' : '<p><strong>You will not ea
 let correct_response, your_goal;
 
 if (condition_assignment === 3) {
-    correct_response = "Stop the timer between 4.95 and 5.05 seconds";
-    your_goal = `Your goal is to <strong>stop the timer between 4.95 and 5.05 seconds</strong>`
+    correct_response = "Stop the timer between 4.80 and 5.20 seconds";
+    your_goal = `Your goal is to <strong>stop the timer between 4.80 and 5.20 seconds</strong>`
 } else {
     correct_response = "Stop the timer as close to 5.00 seconds as possible";
     your_goal = `Your goal is to <strong>stop the timer as close to 5.00 seconds as possible</strong>`
@@ -70,8 +70,8 @@ switch (condition_assignment) {
     case 3:
         condition_specific_paragraph = `<div style="font-size:20px; width:700px"><p>There is a $100 bonus opportunity!</p>
         <p>Throughout the Stopwatch Game, you'll earn tokens for good performance. <strong>Your tokens will be entered into a lottery, and if one of your tokens is drawn, you'll earn $100</strong>. To maximize your chances of winning $100, win as many tokens as possible!</p>
-        <p>You'll earn tokens each time you stop the timer between 4.95s and 5.05s. Specifically, <strong>each time you stop the timer between 4.95s and 5.05s, you'll earn 4 tokens</strong>.</p>
-        <p>To maximize your chances of winning $100, <strong>you must stop the timer between 4.95s and 5.05s</strong>.</p>`;
+        <p>You'll earn tokens each time you stop the timer between 4.80s and 5.20s. Specifically, <strong>each time you stop the timer between 4.80s and 5.20s, you'll earn 4 tokens</strong>.</p>
+        <p>To maximize your chances of winning $100, <strong>you must stop the timer between 4.80s and 5.20s</strong>.</p>`;
         break;
 }
 
@@ -90,7 +90,7 @@ switch (condition_assignment) {
     case 3:
         final_reminder_text = `<div class="instructions" style="text-align: left; font-size: 20px; max-width: 650px; margin: auto;">
         <p>Next, you will play the Stopwatch Game.</p>
-        <p>As a final reminder, you'll earn tokens each time you stop the timer between 4.95s and 5.05s. Specifically, <strong>each time you stop the timer between 4.95s and 5.05s, you'll earn 4 tokens</strong>.</p></div>`;
+        <p>As a final reminder, you'll earn tokens each time you stop the timer between 4.80s and 5.20s. Specifically, <strong>each time you stop the timer between 4.80s and 5.20s, you'll earn 4 tokens</strong>.</p></div>`;
         break;
 }
 
@@ -407,7 +407,7 @@ const stopwatch_attention_check_1 = {
     type: 'survey-multi-choice',
     questions: [{ prompt: "What is your goal?", name: "stopwatch_check_1",  options: [
                 "Stop the timer as close to 5.00 seconds as possible",
-                "Stop the timer between 4.95 and 5.05 seconds",
+                "Stop the timer between 4.80 and 5.20 seconds",
                 "Stop the timer as fast as possible",
                 "Stop the timer before 10 seconds",
             ], required: true }],
@@ -422,14 +422,14 @@ const attention_check_1_feedback = {
 
 const stopwatch_attention_check_2 = {
     type: 'survey-multi-choice',
-    questions: [{ prompt: "How can you earn a bonus payment in this game?", name: "stopwatch_check_2", options: (condition_assignment === 2) ? ["By getting the closest average time to 5.00 seconds.", "By getting the most stops between 4.95s and 5.05s.", "By playing for the longest amount of time.", "Everyone gets a bonus payment."] : ["By getting the most stops between 4.95s and 5.05s.", "By getting the closest average time to 5.00 seconds.", "By playing for the longest amount of time.", "Everyone gets a bonus payment."], required: true }],
-    on_finish: function(data) { const answer = JSON.parse(data.responses).stopwatch_check_2; let correct_response = (condition_assignment === 2) ? "By getting the closest average time to 5.00 seconds." : "By getting the most stops between 4.95s and 5.05s."; data.correct = (answer === correct_response); }
+    questions: [{ prompt: "How can you earn a bonus payment in this game?", name: "stopwatch_check_2", options: (condition_assignment === 2) ? ["By getting the closest average time to 5.00 seconds.", "By getting the most stops between 4.80s and 5.20s.", "By playing for the longest amount of time.", "Everyone gets a bonus payment."] : ["By getting the most stops between 4.80s and 5.20s.", "By getting the closest average time to 5.00 seconds.", "By playing for the longest amount of time.", "Everyone gets a bonus payment."], required: true }],
+    on_finish: function(data) { const answer = JSON.parse(data.responses).stopwatch_check_2; let correct_response = (condition_assignment === 2) ? "By getting the closest average time to 5.00 seconds." : "By getting the most stops between 4.80s and 5.20s."; data.correct = (answer === correct_response); }
 };
 
 const attention_check_2_feedback = {
     type: 'html-button-response',
     stimulus: function() {
-        let correct_answer_text = (condition_assignment === 2) ? "By getting the closest average time to 5.00 seconds." : "By getting the most stops between 4.95s and 5.05s.";
+        let correct_answer_text = (condition_assignment === 2) ? "By getting the closest average time to 5.00 seconds." : "By getting the most stops between 4.80s and 5.20s.";
         return (jsPsych.data.get().last(1).values()[0].correct) ? `<div style="max-width: 600px; margin: auto;"><p style="font-size: 24px; color: green;">Correct!</p><p>The correct answer was: <strong>${correct_answer_text}</strong></p></div>` : `<div style="max-width: 600px; margin: auto;"><p style="font-size: 24px; color: red;">Incorrect.</p><p>The correct answer was: <strong>${correct_answer_text}</strong></p></div>`;
     },
     choices: ['Continue']
