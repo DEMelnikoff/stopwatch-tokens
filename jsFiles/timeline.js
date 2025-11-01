@@ -2,7 +2,7 @@ var filename_prefix = jsPsych.data.getURLVariable('PROLIFIC_PID');
 if (!filename_prefix) { filename_prefix = jsPsych.randomization.randomID(10) };
 var myfilename = filename_prefix + "_combined.csv";
 
-var experiment_id = "ZPk39lIbYVWL";
+var experiment_id = "xmWDMQDj64xB";
 var prolific_completion_code = "CGHVX8IL";
 
 var condition_assignment;
@@ -46,6 +46,8 @@ if (condition_assignment === 3) {
     correct_response = "Stop the timer as close to 5.00 seconds as possible";
     your_goal = `Your goal is to <strong>stop the timer as close to 5.00 seconds as possible</strong>`
 }
+
+let correct_response_tokens = "During the Free Play Session, I cannot earn tokens";
 
 const stopwatch_base_instructions = `<div class="instructions" style="text-align: left; max-width: 600px; margin: auto;"><h2>Game #2: Stopwatch Game</h2>`;
 
@@ -241,7 +243,7 @@ function createFreePlaySection() {
                 const timer_text = `Time Remaining: ${Math.floor(Math.max(0, freePlayState.duration - (Date.now() - freePlayState.startTime)) / 1000 / 60)}:${Math.floor((Math.max(0, freePlayState.duration - (Date.now() - freePlayState.startTime)) / 1000) % 60).toString().padStart(2, '0')}`;
                 const switch_button_text = `Switch to ${freePlayState.currentGame === 'stopwatch' ? 'Hole in One' : 'Stopwatch'}`;
 
-                const ui_html = `<div id="free-play-ui-container" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 20px; padding: 10px; font-family: sans-serif; width: 320px; margin: auto; border: 1px solid #ccc; border-radius: 10px;"><div id="free-play-timer" style="font-weight: bold; color: black; font-size: 18px; width: 180px; text-align: left;"">${timer_text}</div><button id="free-play-switch-btn" class="jspsych-btn" style="width: 180px;">${switch_button_text}</button></div>`;
+                const ui_html = `<div id="free-play-ui-container" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 20px; padding: 10px; font-family: sans-serif; width: 340px; margin: auto; border: 1px solid #ccc; border-radius: 10px;"><div id="free-play-timer" style="font-weight: bold; color: black; font-size: 18px; width: 180px; text-align: left;"">${timer_text}</div><button id="free-play-switch-btn" class="swtch-btn" style="width: 180px;">${switch_button_text}</button></div>`;
 
                 let game_html = '';
                 if (freePlayState.currentGame === 'stopwatch') {
@@ -273,33 +275,94 @@ function createFreePlaySection() {
     };
 
     function setupStopwatchGame() {
+        console.log("start");
+
         const button = document.getElementById('stopwatch-btn');
         const display = document.getElementById('stopwatch-display');
-        let stopwatchStartTime = performance.now();
-        let stopwatchInterval = setInterval(() => {
-            let elapsed = (performance.now() - stopwatchStartTime) / 1000;
-            if (display && display.isConnected) {
-                if (elapsed <= 10) { display.innerHTML = elapsed.toFixed(2); } else { handleStopwatchEnd(null); }
-            } else { clearInterval(stopwatchInterval); }
-        }, 10);
+        let stopwatchStartTime = null;
+        let stopwatchInterval = null;
+        let hasStarted = false;
+
+        // Show "Press Space to Start" until they begin
+        if (display) {
+            display.innerHTML = `<div style="font-size: 25px">Press your spacebar<br>to play a round of<br>the Stopwatch Game</div>`;
+        }
         const handleStopwatchEnd = (elapsedTime) => {
             clearInterval(stopwatchInterval);
             document.removeEventListener('keydown', spacebarListener);
             if (button) { button.onclick = null; button.disabled = true; }
+
             freePlayState.isFeedbackActive = true;
-            const is_perfect = elapsedTime !== null && Math.abs(parseFloat(elapsedTime.toFixed(2)) - TARGET_TIME) <= PERFECT_WINDOW;
-            jsPsych.data.write({ task: 'free_play_stopwatch', stopwatch_time: elapsedTime, is_perfect: is_perfect, new_score: is_perfect ? freePlayState.score + 1 : freePlayState.score, target_time: TARGET_TIME});
-            if (display && elapsedTime !== null) { display.innerHTML = elapsedTime.toFixed(2); } else if (display) { display.innerHTML = "Time Out!"; display.style.fontSize = "48px"; }
+            const is_perfect = elapsedTime !== null &&
+                Math.abs(parseFloat(elapsedTime.toFixed(2)) - TARGET_TIME) <= PERFECT_WINDOW;
+
+            jsPsych.data.write({
+                task: 'free_play_stopwatch',
+                stopwatch_time: elapsedTime,
+                is_perfect: is_perfect,
+                new_score: is_perfect ? freePlayState.score + 1 : freePlayState.score,
+                target_time: TARGET_TIME
+            });
+
+            if (display && elapsedTime !== null) {
+                display.innerHTML = elapsedTime.toFixed(2);
+            } else if (display) {
+                display.innerHTML = "Time Out!";
+                display.style.fontSize = "48px";
+            }
+
             if (is_perfect) {
                 freePlayState.score++;
                 setTimeout(() => {
                     const scoreboardEl = document.getElementById('stopwatch-score');
-                    if (scoreboardEl) { scoreboardEl.style.backgroundColor = '#ffc107'; scoreboardEl.style.color = 'black'; scoreboardEl.textContent = freePlayState.score; setTimeout(() => { scoreboardEl.style.backgroundColor = 'rgba(0,0,0,0.3)'; scoreboardEl.style.color = 'white'; }, 250); }
+                    if (scoreboardEl) {
+                        scoreboardEl.style.backgroundColor = '#ffc107';
+                        scoreboardEl.style.color = 'black';
+                        scoreboardEl.textContent = freePlayState.score;
+                        setTimeout(() => {
+                            scoreboardEl.style.backgroundColor = 'rgba(0,0,0,0.3)';
+                            scoreboardEl.style.color = 'white';
+                        }, 250);
+                    }
                 }, 1500);
             }
-            setTimeout(() => { if (freePlayState.isFeedbackActive) { freePlayState.isFeedbackActive = false; jsPsych.finishTrial(); } }, 3000);
+
+            setTimeout(() => {
+                if (freePlayState.isFeedbackActive) {
+                    freePlayState.isFeedbackActive = false;
+                    jsPsych.finishTrial();
+                }
+            }, 3000);
         };
-        const spacebarListener = (e) => { if (e.key === ' ') { e.preventDefault(); handleStopwatchEnd((performance.now() - stopwatchStartTime) / 1000); } };
+
+        const spacebarListener = (e) => {
+            if (e.key !== ' ') return;
+            e.preventDefault();
+
+            if (!hasStarted) {
+                // FIRST press → start the stopwatch
+                hasStarted = true;
+                stopwatchStartTime = performance.now();
+
+                stopwatchInterval = setInterval(() => {
+                    let elapsed = (performance.now() - stopwatchStartTime) / 1000;
+                    if (!display || !display.isConnected) {
+                        clearInterval(stopwatchInterval);
+                        return;
+                    }
+                    if (elapsed <= 10) {
+                        display.innerHTML = elapsed.toFixed(2);
+                    } else {
+                        handleStopwatchEnd(null);
+                    }
+                }, 10);
+
+            } else {
+                // SECOND press → stop and record
+                handleStopwatchEnd((performance.now() - stopwatchStartTime) / 1000);
+            }
+        };
+
         document.addEventListener('keydown', spacebarListener);
     }
 
@@ -420,6 +483,23 @@ const attention_check_1_feedback = {
     choices: ['Continue']
 };
 
+const tokens_attention_check = {
+    type: 'survey-multi-choice',
+    questions: [{ prompt: "Before you start the Free Play Session, please indicate which of the following statements is true.", name: "tokens_check",  options: [
+                "During the Free Play Session, I can earn tokens by playing Hole in One",
+                "During the Free Play Session, I can earn tokens by playing the Stopwatch Game",
+                "During the Free Play Session, I can earn tokens by playing either game",
+                "During the Free Play Session, I cannot earn tokens",
+            ], required: true }],
+    on_finish: function(data) { data.correct =(JSON.parse(data.responses).tokens_check === correct_response_tokens); }
+};
+
+const tokens_attention_check_feedback = {
+    type: 'html-button-response',
+    stimulus: () => (jsPsych.data.get().last(1).values()[0].correct) ? `<div style="max-width: 600px; margin: auto;"><p style="font-size: 24px; color: green;">Correct!</p><p>The correct answer was: <p><strong>${correct_response_tokens}</strong>.</p></p></div>` : `<div style="max-width: 600px; margin: auto;"><p style="font-size: 24px; color: red;">Incorrect.</p><p>The correct answer was: <p><strong>${correct_response_tokens}</strong>.</p></p></div>`,
+    choices: ['Continue']
+};
+
 const stopwatch_attention_check_2 = {
     type: 'survey-multi-choice',
     questions: [{ prompt: "How can you earn a bonus payment in this game?", name: "stopwatch_check_2", options: (condition_assignment === 2) ? ["By getting the closest average time to 5.00 seconds.", "By getting the most stops between 4.80s and 5.20s.", "By playing for the longest amount of time.", "Everyone gets a bonus payment."] : ["By getting the most stops between 4.80s and 5.20s.", "By getting the closest average time to 5.00 seconds.", "By playing for the longest amount of time.", "Everyone gets a bonus payment."], required: true }],
@@ -494,6 +574,10 @@ timeline.push(new scbQs('stopwatch', () => 'the Stopwatch Game'));
 timeline.push({ type: 'html-button-response', stimulus: `<div style="text-align: left; max-width: 650px; margin: auto;">
     <h2>Part 3: Free Play Session</h2><p>Thank you for finishing both games! Now, you will have a 5-minute "free play" period where you can freely play two games for some more time.</p><p>You will be able to choose which game you want to play, and you can switch between them as often as you like.</p>${moneyMessage0}<p>Click 'Continue' for detailed instructions.</p></div>`, choices: ['Continue'], });
 timeline.push({ type: 'html-button-response', stimulus: `<div style="text-align: left; max-width: 600px; margin: auto;"><h2>Free Play Instructions</h2><p>This session will last for 5 minutes.</p><p>You can switch back and forth between two games:</p><ul><li><b>Stopwatch Game:</b> This is the same game as before.${moneyMessage1}</li><li><b>Hole in One Game:</b> This is the same game as before.${moneyMessage2}</li></ul><p>A control panel will appear above the game, allowing you to switch at any time.</p></div>`, choices: ['Start Free Play'] });
+if (condition_assignment > 1) {
+    timeline.push(tokens_attention_check);
+    timeline.push(tokens_attention_check_feedback);
+};
 timeline.push(createFreePlaySection());
 
 // --- Demographics & End ---

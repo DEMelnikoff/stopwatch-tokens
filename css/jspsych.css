@@ -111,6 +111,46 @@
   cursor: not-allowed;
 }
 
+.swtch-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 0px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;                 /* white text */
+  background-color: #28a745;   /* green */
+  border-color: #28a745;       /* matching border */
+}
+
+/* Hover effect only on pointer devices */
+@media (hover: hover) {
+  .swtch-btn:hover {
+    background-color: #218838;  /* darker green */
+    border-color: #1e7e34;
+  }
+}
+
+.swtch-btn:active {
+  background-color: #1e7e34;    /* even darker when pressed */
+  border-color: #1c7430;
+}
+
+.swtch-btn:disabled {
+  background-color: #98d6a9;  /* subtle desaturated green */
+  color: #e5e5e5;
+  border-color: #98d6a9;
+  cursor: not-allowed;
+}
+
 /* custom style for input[type="range] (slider) to improve alignment between positions and labels */
 
 .jspsych-slider {
