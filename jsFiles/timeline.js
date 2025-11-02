@@ -2,7 +2,7 @@ var filename_prefix = jsPsych.data.getURLVariable('PROLIFIC_PID');
 if (!filename_prefix) { filename_prefix = jsPsych.randomization.randomID(10) };
 var myfilename = filename_prefix + "_combined.csv";
 
-var experiment_id = "ZBZXBX4Oc2b0";
+var experiment_id = "qZ4kUGxLlJq2";
 var prolific_completion_code = "CGHVX8IL";
 
 var condition_assignment;
