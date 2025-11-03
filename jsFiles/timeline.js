@@ -2,7 +2,7 @@ var filename_prefix = jsPsych.data.getURLVariable('PROLIFIC_PID');
 if (!filename_prefix) { filename_prefix = jsPsych.randomization.randomID(10) };
 var myfilename = filename_prefix + "_combined.csv";
 
-var experiment_id = "Dtx7eUpnKLUE";
+var experiment_id = "VMIphYUhxxh3";
 var prolific_completion_code = "CGHVX8IL";
 
 var condition_assignment;
@@ -40,8 +40,8 @@ let moneyMessage0 = condition_assignment == 1 ? '' : '<p><strong>You will not ea
 let correct_response, your_goal;
 
 if (condition_assignment === 3) {
-    correct_response = "Stop the timer between 4.80 and 5.20 seconds";
-    your_goal = `Your goal is to <strong>stop the timer between 4.80 and 5.20 seconds</strong>`
+    correct_response = "Stop the timer between 4.90 and 5.10 seconds";
+    your_goal = `Your goal is to <strong>stop the timer between 4.90 and 5.10 seconds</strong>`
 } else {
     correct_response = "Stop the timer as close to 5.00 seconds as possible";
     your_goal = `Your goal is to <strong>stop the timer as close to 5.00 seconds as possible</strong>`
@@ -72,8 +72,8 @@ switch (condition_assignment) {
     case 3:
         condition_specific_paragraph = `<div style="font-size:20px; width:700px"><p>There is a $100 bonus opportunity!</p>
         <p>Throughout the Stopwatch Game, you'll earn tokens for good performance. <strong>Your tokens will be entered into a lottery, and if one of your tokens is drawn, you'll earn $100</strong>. To maximize your chances of winning $100, win as many tokens as possible!</p>
-        <p>You'll earn tokens each time you stop the timer between 4.80s and 5.20s. Specifically, <strong>each time you stop the timer between 4.80s and 5.20s, you'll earn 1.5 tokens</strong>.</p>
-        <p>To maximize your chances of winning $100, <strong>you must stop the timer between 4.80s and 5.20s</strong>.</p>`;
+        <p>You'll earn tokens each time you stop the timer between 4.90s and 5.10s. Specifically, <strong>each time you stop the timer between 4.90s and 5.10s, you'll earn 2 tokens</strong>.</p>
+        <p>To maximize your chances of winning $100, <strong>you must stop the timer between 4.90s and 5.10s</strong>.</p>`;
         break;
 }
 
@@ -92,7 +92,7 @@ switch (condition_assignment) {
     case 3:
         final_reminder_text = `<div class="instructions" style="text-align: left; font-size: 20px; max-width: 650px; margin: auto;">
         <p>Next, you will play the Stopwatch Game.</p>
-        <p>As a final reminder, you'll earn tokens each time you stop the timer between 4.80s and 5.20s. Specifically, <strong>each time you stop the timer between 4.80s and 5.20s, you'll earn 1.5 tokens</strong>.</p></div>`;
+        <p>As a final reminder, you'll earn tokens each time you stop the timer between 4.90s and 5.10s. Specifically, <strong>each time you stop the timer between 4.90s and 5.10s, you'll earn 2 tokens</strong>.</p></div>`;
         break;
 }
 
@@ -470,7 +470,7 @@ const stopwatch_attention_check_1 = {
     type: 'survey-multi-choice',
     questions: [{ prompt: "What is your goal?", name: "stopwatch_check_1",  options: [
                 "Stop the timer as close to 5.00 seconds as possible",
-                "Stop the timer between 4.80 and 5.20 seconds",
+                "Stop the timer between 4.90 and 5.10 seconds",
                 "Stop the timer as fast as possible",
                 "Stop the timer before 10 seconds",
             ], required: true }],
