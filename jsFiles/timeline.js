@@ -2,7 +2,7 @@ var filename_prefix = jsPsych.data.getURLVariable('PROLIFIC_PID');
 if (!filename_prefix) { filename_prefix = jsPsych.randomization.randomID(10) };
 var myfilename = filename_prefix + "_combined.csv";
 
-var experiment_id = "qZ4kUGxLlJq2";
+var experiment_id = "Dtx7eUpnKLUE";
 var prolific_completion_code = "CGHVX8IL";
 
 var condition_assignment;
@@ -54,7 +54,7 @@ const stopwatch_base_instructions = `<div class="instructions" style="text-align
 let condition_specific_paragraph = '';
 switch (condition_assignment) {
     case 1:
-        condition_specific_paragraph = `<div style="font-size:20px"><p>Your goal is to stop the timer as close to 5.00 seconds as possible on each turn. Good luck!</p>`;
+        condition_specific_paragraph = `<div style="font-size:20px"><p>Your goal is to stop the timer as close to 5.00s as possible on each turn. The closer you get to 5.00s the better!</p>`;
         break;
     case 2:
         condition_specific_paragraph = `<div style="font-size:20px; width:700px"><p>There is a $100 bonus opportunity!</p>
