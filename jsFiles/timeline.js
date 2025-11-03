@@ -536,6 +536,8 @@ timeline.push(new flowQs('hole_in_one', () => 'Hole in One'));
 timeline.push(new enjoyQs('hole_in_one', () => 'Hole in One'));
 timeline.push(new scbQs('hole_in_one', () => 'Hole in One'));
 
+const stopImg = (condition_assignment == 3) ? `` : `<img src="./stopwatchscreenshot.png" style="width: 400px;"/>`
+
 //--- Part 2: Stopwatch ---
 timeline.push({ type: 'html-button-response', stimulus: "<p>Next, you will play a different game called the Stopwatch Game.</p><p>Continue to learn more about the Stopwatch Game.</p>", choices: ['Continue'] });
 const stopwatch_visual_instructions_pages = [
@@ -548,7 +550,7 @@ const stopwatch_visual_instructions_pages = [
 
     `<div class='instructions' style="max-width: 800px; margin: auto; text-align: center;">
         <p>When you press your SPACEBAR, the timer will stop.</p>
-        <img src="./stopwatchscreenshot.png" style="width: 400px;"/>
+        ${stopImg}
         <p style="font-size: 20px; font-weight: bold;">${your_goal}.</p>
     </div>`,
 
